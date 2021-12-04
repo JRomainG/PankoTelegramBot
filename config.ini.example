@@ -1,0 +1,12 @@
+[Profile name]
+; Username of the user for which to check if new posts have been uploaded
+username = Imgur username
+
+; How often to check if a new image has been uploaded (in seconds)
+check_interval = 3600
+
+; In which chat to send notifications about new posts
+; The Telegram chat ID can be obtained after adding the bot to a chat
+; Replace {token} with the bot's secret token:
+; https://api.telegram.org/bot{token}/getUpdates
+chat_id = my_chat_id

@@ -1,0 +1,6 @@
+[Imgur]
+client_id=YOUR ID HERE
+client_secret=YOUR SECRET HERE
+
+[Telegram]
+token=YOU SECRET TOKEN HERE

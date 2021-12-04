@@ -1,0 +1,2 @@
+imgurpython
+python-telegram-bot
