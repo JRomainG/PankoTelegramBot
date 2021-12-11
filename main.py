@@ -33,8 +33,9 @@ def main():
     # Wait for all bots and make sure to stop them all once we're done
     logging.info("Started %d bot(s)", len(bots))
     try:
-        while True:
-            input("Use Ctrl+C to stop\n")
+        print("Use Ctrl+C to stop")
+        for bot in bots:
+            bot.wait()
     except KeyboardInterrupt:
         pass
     finally:

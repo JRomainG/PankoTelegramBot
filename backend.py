@@ -17,6 +17,9 @@ class ImgurBot:
         self.thread = threading.Thread(target=self.check_posts, daemon=True)
         self.thread.start()
 
+    def wait(self):
+        self.thread.join()
+
     def stop(self):
         self.stop_event.set()
         self.thread.join()
