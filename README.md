@@ -13,9 +13,7 @@ Dependencies can be installed using pip:
 $ pip3 install -r requirements.txt
 ```
 
-## Usage
-
-### Configuration
+## Configuration
 
 You need to create two files: `auth.ini` and `config.ini`:
 
@@ -24,7 +22,7 @@ $ cp auth.ini.example auth.ini
 $ cp config.ini.example config.ini
 ```
 
-#### Imgur
+### Imgur
 
 You must register your client with the Imgur API, as detailed in the [official
 documentation](https://api.imgur.com/#registerapp):
@@ -40,7 +38,7 @@ documentation](https://api.imgur.com/#registerapp):
 Imgur should then provide you with a `client_id` and `client_secret`, which you
 should save in the `auth.ini` file for the bot to use.
 
-#### Telegram
+### Telegram
 
 To send messages using Telegram, you first need to create a [Telegram
 bot](https://core.telegram.org/bots). For this, you need to talk to
@@ -53,23 +51,32 @@ retrieve its chat id. After inviting the bot, you can find the chat ID from the
 `https://api.telegram.org/bot{token}/getUpdates` URL (replacing `{token}` with
 your bot's token).
 
-#### PankoBot
+### PankoBot
 
 Finally, you can configure this script by editing the `config.ini` file. Here
 are the available options:
 
-| Key            | Type   | Description                                                                   |
-| -------------- | ------ | ----------------------------------------------------------------------------- |
-| username       | string | The username of the Imgur user you want to follow  (e.g. PankoBoy)            |
-| check_interval | int    | How often to check available slots for each lab (in seconds, default is 3600) |
-| chat_id        | string | The ID of the Telegram chat to which messages are sent                        |
+| Key            | Type   | Description                                                        |
+| -------------- | ------ | ------------------------------------------------------------------ |
+| username       | string | The username of the Imgur user you want to follow  (e.g. PankoBoy) |
+| check_interval | int    | How often to check for new posts (in seconds, default is 3600)     |
+| chat_id        | string | The ID of the Telegram chat to which messages are sent             |
 
-### Running
+## Running
 
 Simply start the script and let it run in the background:
 
 ```bash
 $ python3 main.py
+```
+
+### Docker
+
+You can run the bot directly using [Docker](https://www.docker.com):
+
+```bash
+$ docker build . -t pankobot
+$ docker run -d pankobot
 ```
 
 ### Systemd service
