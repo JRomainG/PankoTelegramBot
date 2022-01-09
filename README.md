@@ -56,11 +56,12 @@ your bot's token).
 Finally, you can configure this script by editing the `config.ini` file. Here
 are the available options:
 
-| Key            | Type   | Description                                                        |
-| -------------- | ------ | ------------------------------------------------------------------ |
-| username       | string | The username of the Imgur user you want to follow  (e.g. PankoBoy) |
-| check_interval | int    | How often to check for new posts (in seconds, default is 3600)     |
-| chat_id        | string | The ID of the Telegram chat to which messages are sent             |
+| Key                  | Type   | Description                                                          |
+| -------------------- | ------ | -------------------------------------------------------------------- |
+| username             | string | The username of the Imgur user you want to follow  (e.g. PankoBoy)   |
+| check_interval       | int    | How often to check for new posts (in seconds, default is 3600)       |
+| chat_id              | string | The ID of the Telegram chat to which messages are sent               |
+| silent_notifications | bool   | Whether to send messages silently (notifications will have no sound) |
 
 ## Running
 

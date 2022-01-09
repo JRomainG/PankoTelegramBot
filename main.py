@@ -21,7 +21,8 @@ def main():
     for user in config.sections():
         # Create a "transport" to send Telegram messages
         chat_id = config[user]["chat_id"]
-        transport = TelegramTransport(auth_config["Telegram"], chat_id)
+        silent = config[user].getboolean("silent_notifications", False)
+        transport = TelegramTransport(auth_config["Telegram"], chat_id, silent)
 
         # Create an Imgur bot using this transport
         logging.info("Creating bot for user %s...", user)

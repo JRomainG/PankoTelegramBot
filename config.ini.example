@@ -10,3 +10,7 @@ check_interval = 3600
 ; Replace {token} with the bot's secret token:
 ; https://api.telegram.org/bot{token}/getUpdates
 chat_id = my_chat_id
+
+; Whether to send messages silently: users will receive notifications with no
+; sound if set to True
+silent_notifications = False
