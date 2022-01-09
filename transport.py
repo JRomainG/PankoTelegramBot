@@ -11,7 +11,5 @@ class TelegramTransport:
     def send_message(self, text):
         logging.debug("[TelegramTransport] Sending message:\n%s", text)
         self.tg_bot.send_message(
-            chat_id=self.chat_id,
-            text=text,
-            disable_notification=self.silent
+            chat_id=self.chat_id, text=text, disable_notification=self.silent
         )
